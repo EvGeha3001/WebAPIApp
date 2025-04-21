@@ -74,12 +74,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AutoLotDAL.Models1\AutoLotDAL.Models.csproj">
-      <Project>{5a574d5b-d074-4850-bcae-412569e65c16}</Project>
-      <Name>AutoLotDAL.Models</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Migrations\202501161534126_CountAdded.resx">
       <DependentUpon>202501161534126_CountAdded.cs</DependentUpon>
     </EmbeddedResource>

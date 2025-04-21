@@ -19,11 +19,6 @@ namespace CarLotWebAPI.Controllers
     [RoutePrefix("api/Inventory")]
     public class InventoryController : ApiController
     {
-        //[HttpGet, Route("")]
-        //public IEnumerable<string> Get()
-        //{
-        //    return new string[] { "value1", "value2" };
-        //}
         private readonly InventoryRepo _repo = new InventoryRepo();
         private Mapper _mapper;
         public InventoryController() 
@@ -42,17 +37,6 @@ namespace CarLotWebAPI.Controllers
             var inventories = _repo.GetAll();
             return _mapper.Map<List<Inventory>, List<Inventory>>(inventories);
         }
-        //public HttpResponseMessage Get() 
-        //{ 
-        //    HttpResponseMessage response 
-        //        = Request.CreateResponse(HttpStatusCode.OK, "value");
-        //    response.Content = new StringContent("hello", Encoding.Unicode);
-        //    response.Headers.CacheControl = new CacheControlHeaderValue()
-        //    {
-        //        MaxAge = TimeSpan.FromMinutes(20)
-        //    };
-        //    return response;
-        //}
 
         [HttpGet, Route("{id}", Name = "DisplayRoute")]
         [ResponseType(typeof(Inventory))]
